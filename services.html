@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Seattle Turban Tying Service</title>
+      <link rel="icon" type="image/png" href="assets/logo/ICON.png">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #000;
+            color: #fff;
+        }
+
+        
+ header {
+            height: 40vh;
+            background: url('assets/logo/Logo.png') center/cover no-repeat;
+            padding: 100px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        header h1,
+        header p {
+            position: relative;
+            z-index: 2;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            background: linear-gradient(to right, #ffdf00, #ff8c00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 15px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #eee;
+        }
+
+        section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: auto;
+            background-color: #000;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: #ffcc00;
+        }
+
+        .services-grid {
+            display: grid;
+            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            align-items: stretch;
+        }
+
+        .service-card:hover {
+            transform: scale(1.03);
+        }
+
+        .service-card {
+            background: #111;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(255, 255, 255, 0.05);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            max-height: 400px;
+        }
+
+        .service-card:hover {
+            transform: scale(1.03);
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+            border-bottom: 1px solid #222;
+        }
+
+
+        .service-card .content {
+            padding: 20px;
+            flex-grow: 1;
+            /* Makes sure text doesn't squeeze */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+
+        .service-card .content {
+            padding: 20px;
+        }
+
+        .service-card p {
+            color: #ddd;
+            font-size: 0.95rem;
+        }
+
+        .why-us {
+            background: #111;
+            border-left: 5px solid #ffcc00;
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 60px;
+        }
+
+        .why-us ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .why-us li {
+            margin-bottom: 12px;
+            font-size: 1rem;
+        }
+
+        .gallery-preview {
+            margin-top: 60px;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .gallery-preview img {
+            width: 200px;
+            height: 200px;
+            border-radius: 15px;
+            object-fit: cover;
+            box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+        }
+
+        .cta {
+            text-align: center;
+            margin-top: 60px;
+            padding: 40px 20px;
+            background: #1a1a1a;
+            border-radius: 15px;
+            color: white;
+        }
+
+        .cta h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .cta a {
+            background: #ffcc00;
+            color: #000;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .cta a:hover {
+            background: #e6b800;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #000;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        .pattern-section {
+            /* background: radial-gradient(circle at top left, #1a1a1a, #0e0e0e); */
+            padding: 60px 20px;
+        }
+
+        .pattern-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .pattern-card {
+            width: 300px;
+            margin: 15px;
+            background: #1f1f1f;
+            border: 1px solid #333;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 0 15px rgb(255 215 0 / 40%);
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
+
+        .pattern-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .pattern-card img {
+            width: 70%;
+            padding: 10px;
+            margin-top: 15px;
+            height: 250px;
+            /* object-fit: cover; */
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+            border-radius: 50%;
+        }
+
+        .pattern-card .info {
+            padding: 15px;
+            color: #ccc;
+        }
+
+        .pattern-card .info h4 {
+            color: #ffd700;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+   <nav>
+        <a href="index.html">
+            <div class="logo">
+                <img src="assets/logo/Logo.png" alt="TurbanPro Logo" />
+            </div>
+        </a>
+        <button class="menu-btn" id="menu-btn">☰</button>
+
+        <ul id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="services.html">Sevices</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- Hero -->
+    <header id="servicejump fade-in">
+        <h1>Seattle Turban</h1>
+        <h2>Our Services</h2>
+        <p>Elegance in Every Fold — Turban Styling That Speaks Tradition with a Twist.</p>
+    </header>
+
+    <!-- Services Section -->
+    <section class="fade-in">
+        <h2 class="section-title">What We Offer</h2>
+         <div class="pattern-gallery">
+            <div class="pattern-card">
+                <img src="assets/images/20.jpg" alt="Style 1">
+                <div class="info">
+                    <h4>Wedding Turban Styling</h4>
+                    <p>Regal, classic, and custom-fitted turbans for your big day. We make you stand out with tradition
+                        and grace.</p>
+                </div>
+            </div>
+            <div class="pattern-card">
+                <img src="assets/images/24.jpg" alt="Style 2">
+                <div class="info">
+                    <h4>Photoshoots</h4>
+                    <p>Perfectly styled turbans for fashion shoots, brand campaigns, and personal portfolios.</p>
+                </div>
+            </div>
+            <div class="pattern-card">
+                <img src="assets/images/14.jpg" alt="Style 3">
+                <div class="info">
+                    <h4>Festive Looks</h4>
+                    <p>Celebrate cultural events and festivals in style with vibrant turban looks tailored for the
+                        occasion.</p>
+                </div>
+            </div>
+            <div class="pattern-card">
+                <img src="assets/imageS/Varinder Singh.jpg" alt="Style 4">
+                <div class="info">
+                    <h4>Custom Styling</h4>
+                    <p>Your turban, your way. We design unique styles based on face shape, outfit, and event vibe.</p>
+                </div>
+            </div>
+
+        </div>
+        </div>
+    </section>
+
+    <!-- Why Us -->
+    <section class="why-us fade-in">
+       <h2 class="section-title">Why Choose Seattle Turban?</h2>
+<ul>
+    <li>🕌 We understand the traditions behind every turban and tie it with meaning, respect, and pride.</li>
+    <li>🌟 Over 5 years of hands-on experience</li>
+    <li>🎉 Served 150+ weddings, events, and shoots</li>
+    <li>✨ Every turban is wrapped to suit your face, outfit, and vibe — no one-style-fits-all here.</li>
+    <li>🕰️ Always punctual, always respectful</li>
+    <li>📍 Serving all over U.S.A and surrounding areas</li>
+    <li>📸 Our styles hold strong and sharp — perfect for photos, videos, and long celebrations.</li>
+</ul>
+
+    </section>
+
+    <!-- Gallery Preview -->
+    <section class=" fade-in">
+        <h2 class="section-title">Glimpses of Our Work</h2>
+        <div class="gallery-preview">
+            <img src="assets/images/11.jpg" alt="Gallery 1">
+            <img src="assets/images/17.jpg" alt="Gallery 2">
+            <img src="assets/images/18.jpg" alt="Gallery 3">
+            <img src="assets/images/14.jpg" alt="Gallery 4">
+        </div>
+    </section>
+
+
+    <!-- Types of Turbans Section -->
+    <section class="fade-in">
+        <h2 class="section-title">Types of Turbans We Tie</h2>
+
+
+
+
+
+          <div class="pattern-gallery">
+            <div class="pattern-card">
+                <img src="assets/images/patiala shahi dastar.jpg" alt="Style 1">
+                <div class="info">
+                    <h4>Patiala Shahi</h4>
+                    <p>A majestic, traditional Punjabi turban style known for its regal look and layered wrap.</p>
+                        and grace.</p>
+                </div>
+            </div>
+            <div class="pattern-card">
+                <img src="assets/images/amritsari.webp" alt="Style 2">
+                <div class="info">
+                   <h4>Amritsari</h4>
+                    <p>Neatly layered, centered knot turban, perfect for formal occasions and traditional pride.</p>
+                </div>
+            </div>
+            <div class="pattern-card">
+                <img src="assets/images/wattanwali.png" alt="Style 3">
+                <div class="info">
+                    <h4>Modern Styled Turban</h4>
+                    <p>Sharp, clean folds blended with contemporary aesthetics — great for shoots and grooms.</p>
+                </div>
+            </div>
+            <div class="pattern-card">
+                <img src="assets/imageS/morni (2).png" alt="Style 4">
+                <div class="info">
+                    <h4>Morni Style</h4>
+                    <p>Elegant and showy, the Morni style adds height and flair with peacock feather detailing.</p>
+                </div>
+            </div>
+             <div class="pattern-card">
+                <img src="assets/imageS/saafa.jpg" alt="Style 4">
+                <div class="info">
+                   <h4>Rajputi Safa</h4>
+                    <p>Grand Rajasthani style safa, ideal for royal weddings, baraat entries, and themed events.</p>
+                </div>
+            </div>
+             <div class="pattern-card">
+                <img src="assets/imageS/maharastri.png" alt="Style 4">
+                <div class="info">
+                     <h4>Maharashtrian Pheta</h4>
+                    <p> A vibrant, tail-wrapped turban symbolizing pride, honor, and festive spirit.</p>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta fade-in">
+        <h2>Ready to Look Royal?</h2>
+        <a href="contact.html">Book Your Styling Now</a>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="assets/logo/Logo.png" alt="Logo" class="footer-logo" />
+                <p><b>We tie not just turbans, but pride, elegance, and culture.</b></p>
+               <div class="footer-socials">
+          <a href="https://www.instagram.com/seattleturbanofficial?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+            target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.tiktok.com/@seattleturban?_t=ZP-8wepvVt4v0B&_r=1" target="_blank"><i
+              class="fab fa-tiktok"></i></a>
+          <a href="https://www.facebook.com/SeattleTurban" target="_blank"><i class="fab fa-facebook"></i></a>
+        </div>
+
+            </div>
+
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="services.html">Sevices</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p><b>Email : </b> team@seattleturban.com</p>
+                <p><b>Phone : </b> +1 (206) 771-6638 (Davinder Singh) <br> +1 (425) 524-7884 (Varinder Singh) </p>
+                <p><b>Location : </b> Washington, U.S.A <br> (Open to Travel)</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Seattle Turban. All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- <a class="whatsapp" href="https://wa.me/12067716638" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a> -->
+
+<script>
+     const menuBtn = document.getElementById("menu-btn");
+const navLinks = document.getElementById("nav-links");
+
+// Toggle menu
+menuBtn.addEventListener("click", function (e) {
+    e.stopPropagation(); // Prevent immediate close
+    navLinks.classList.toggle("active");
+});
+
+// Close menu on outside click
+document.addEventListener("click", function (e) {
+    if (!navLinks.contains(e.target) && !menuBtn.contains(e.target)) {
+        navLinks.classList.remove("active");
+    }
+});
+
+// Close on clicking any nav link
+const links = navLinks.querySelectorAll("a");
+links.forEach(link => {
+    link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+    });
+});
+
+const faders = document.querySelectorAll('.fade-in');
+
+  const appearOptions = {
+    threshold: 0.1,
+    rootMargin: "0px 0px -30px 0px"
+  };
+
+  const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('visible');
+      appearOnScroll.unobserve(entry.target);
+    });
+  }, appearOptions);
+
+  faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+  });z
+</script>
+
+ </body>
+
+</html>

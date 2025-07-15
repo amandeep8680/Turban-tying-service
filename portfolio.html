@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Seattle Turban Tying Service</title>
+    <link rel="icon" type="image/png" href="assets/logo/ICON.png">
+    <!-- <link rel="script" href="assets/main.js"> -->
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #0e0e0e;
+            color: #fff;
+        }
+
+        header {
+            height: 40vh;
+            background: url('assets/logo/Logo.png') center/cover no-repeat;
+            padding: 100px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        header h1,
+        header p {
+            position: relative;
+            z-index: 2;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            background: linear-gradient(to right, #ffdf00, #ff8c00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 15px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #eee;
+        }
+
+        .hero-text {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 0 20px;
+        }
+
+        .hero-text h1 {
+            font-size: 3rem;
+            background: linear-gradient(to right, #ffdf00, #ff8c00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            color: #ccc;
+            margin-top: 10px;
+        }
+
+        .section {
+            padding: 60px 20px;
+            max-width: 1300px;
+            margin: auto;
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 40px;
+            background: linear-gradient(to right, #ffd700, #ff8c00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            background: repeating-linear-gradient(45deg, #1a1a1a, #1a1a1a 10px, #111 10px, #111 20px);
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.1);
+            transition: transform 0.4s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+            z-index: 2;
+        }
+
+        .gallery-item img,
+        .gallery-item video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+
+
+        .pattern-section {
+            background: radial-gradient(circle at top left, #1a1a1a, #0e0e0e);
+            padding: 60px 20px;
+        }
+
+        .pattern-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .pattern-card {
+            width: 300px;
+
+            background: #1f1f1f;
+            border: 1px solid #333;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .pattern-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .pattern-card img {
+            width: 100%;
+            height: 250px;
+            /* object-fit: cover; */
+        }
+
+        .pattern-card .info {
+            padding: 15px;
+            color: #ccc;
+        }
+
+        .pattern-card .info h4 {
+            color: #ffd700;
+            margin-bottom: 10px;
+        }
+
+        .about-section {
+            background: #111;
+            padding: 60px 20px;
+            color: #ccc;
+            text-align: center;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            margin: 30px auto 0;
+            padding: 12px 30px;
+            background: linear-gradient(to right, #ffdf00, #ff8c00);
+            color: #000;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background 0.3s ease;
+            text-align: center;
+        }
+
+        .contact-btn:hover {
+            background: linear-gradient(to right, #ff8c00, #ffd700);
+        }
+
+
+        .about-section h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+            background: linear-gradient(to right, #ffd700, #ff8c00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .about-section p {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            /* content: contain; */
+        }
+
+        @media (max-width: 768px) {
+            .pattern-card {
+                width: 100%;
+            }
+
+            .contact-btn:hover {
+                background: linear-gradient(to right, #ff8c00, #ffd700);
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="index.html">
+            <div class="logo">
+                <img src="assets/logo/Logo.png" alt="TurbanPro Logo" />
+            </div>
+        </a>
+        <button class="menu-btn" id="menu-btn">☰</button>
+
+        <ul id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="services.html">Sevices</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    <header id="portfoliojump">
+        <h1>Seattle Turban</h1>
+        <h2>Our portfolio</h2>
+        <p>Crafted Moments, Crowned in Style.</p>
+    </header>
+
+
+    <section class="section fade-in">
+        <h2>Photo & Video Showcase</h2>
+        <div class="gallery">
+            <div class="gallery-item"><img src="assets/images/11.jpg" alt="Turban Style"></div>
+            <div class="gallery-item"><video src="assets/videos/client-1.mp4" autoplay muted loop playsinline></video></div>
+            <div class="gallery-item"><img src="assets/images/14.jpg" alt="Turban Style"></div>
+            <div class="gallery-item"><video src="assets/videos/client-2.mp4"autoplay muted loop playsinline></video></div>
+            <div class="gallery-item"><img src="assets/images/22.jpg" alt="Turban Style"></div>
+            <div class="gallery-item"><img src="assets/images/27.jpg" alt="Turban Style"></div>
+            <div class="gallery-item"><video src="assets/videos/client-3.mp4" autoplay muted loop playsinline></video></div>
+            <div class="gallery-item"><img src="assets/images/15.jpg" alt="Turban Style"></div>
+        </div>
+    </section>
+
+    <section class="section pattern-section fade-in">
+        <h2>Our Signature Styles</h2>
+        <!-- <div class="pattern-gallery">
+            <div class="pattern-card">
+                <img src="assets/images/20.jpg" alt="Style 1">
+                <div class="info">
+                    <h4>Classic Punjabi Pagg</h4>
+                    <p>Known for its clean layers and symmetrical folds — a timeless masterpiece.</p>
+                </div>
+            </div>
+            <div class="pattern-card">
+                <img src="assets/images/24.jpg" alt="Style 2">
+                <div class="info">
+                    <h4>Modern Styled Saafa</h4>
+                    <p>Perfect for contemporary events while retaining traditional essence.</p>
+                </div>
+            </div>
+            <div class="pattern-card">
+                <img src="assets/images/14.jpg" alt="Style 3">
+                <div class="info">
+                    <h4>Royal Sehra Look</h4>
+                    <p>For the groom who wants to feel like royalty on his special day.</p>
+                </div>
+            </div>
+            <div class="pattern-card">
+                <img src="assets/imageS/Varinder Singh.jpg" alt="Style 4">
+                <div class="info">
+                    <h4>Wattan Wali Dastar</h4>
+                    <p>Symbol of pride and heritage — deeply rooted in tradition, worn with grace and honor.</p>
+                </div>
+            </div>
+            <div class="pattern-card">
+                <img src="assets/images/12.jpg" alt="Style 5">
+                <div class="info">
+                    <h4>Pheta</h4>
+                    <p>Royal and bold — perfect for celebratory moments and traditional ceremonies with majestic appeal.
+                    </p>
+                </div>
+            </div>
+            <div class="pattern-card">
+                <img src="assets/images/5.jpg" alt="Style 6">
+                <div class="info">
+                    <h4>Modern Turban Look</h4>
+                    <p>A fusion of sleek aesthetics and minimal folds — designed for today’s stylish gentleman.</p> -->
+
+        <div class="pattern-gallery">
+            <div class="pattern-card">
+                <img src="assets/images/20.jpg" alt="Style 1">
+                <div class="info">
+                    <h4>Morni Pagg</h4>
+                    <p>one of the most popular turban styles for weddings. It has clean layers and a royal shape that
+                        makes every groom look sharp and elegant</p>
+                </div>
+            </div>
+            <div class="pattern-card">
+                <img src="assets/images/24.jpg" alt="Style 2">
+                <div class="info">
+                    <h4>Saafa / Pheta</h4>
+                    <p>A royal-style turban often tied for weddings and special events. It’s loose, grand, and adds a
+                        festive touch to the groom’s overall look.</p>
+                </div>
+            </div>
+            <div class="pattern-card">
+                <img src="assets/images/14.jpg" alt="Style 3">
+                <div class="info">
+                    <h4>Wattan Wali pagg</h4>
+                    <p>A popular among the youth for its sharp, clean look. It’s stylish, modern, and perfect for those
+                        who want a bold yet modern vibe.</p>
+                </div>
+            </div>
+
+
+        </div>
+        </div>
+    </section>
+
+    <section class="section about-section fade-in">
+        <h2>About Our Craft</h2>
+        <p>
+            At Seattle Turban, we believe every turban tied is a piece of living history. Our services blend the values
+            of tradition with modern elegance, offering every client an unforgettable look. With 10+ years of experience
+            and clients across weddings, shoots, and festivals, our styles range from the graceful to the regal.
+        </p>
+        <a href="contact.html" class="contact-btn">Contact Us</a>
+    </section>
+
+
+
+
+    <section class="testimonial-section fade-in" id="testimonials">
+        <h2 class="testimonial-heading">What Our Clients Say</h2>
+        <p class="testimonial-subtext">Real words from those who experienced the pride and elegance.</p>
+
+        <div class="swiper testimonialSwiper">
+            <div class="swiper-wrapper">
+
+                <!-- Slide 1 -->
+                <div class="swiper-slide testimonial-card">
+                    <p>"We had a wonderful experience working with Davinder for our wedding. He was extremely
+                        approachable,
+                        punctual, and showed a high level of professionalism throughout."</p>
+                    <h4>- Atmin D</h4>
+                    <div class="stars">★★★★★</div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="swiper-slide testimonial-card">
+                    <p>"Had a wonderful experience working with Seattle Turban Tying Service and highly recommend them.
+                        Will be
+                        using them again for future events as well."</p>
+                    <h4>- Milan Basra</h4>
+                    <div class="stars">★★★★★</div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="swiper-slide testimonial-card">
+                    <p>"Loved the sehra for my wedding. Definitely recommend Seattle Turban Tying Service."</p>
+                    <h4>- Utraksh Shrivastav</h4>
+                    <div class="stars">★★★★★</div>
+                </div>
+
+                <!-- Slide 4 -->
+                <div class="swiper-slide testimonial-card">
+                    <p>"I worked with them recently and it was an amazing seamless process! They have multiple people to
+                        tie pagg,
+                        so they get the job done quick and on time."</p>
+                    <h4>- Kamalvir Jhajj</h4>
+                    <div class="stars">★★★★★</div>
+                </div>
+
+                <!-- Slide 5 -->
+                <div class="swiper-slide testimonial-card">
+                    <p>"Great service, quick to respond. Traveled to Eastern Washington last minute and took great care
+                        of us.
+                        Highly recommend!"</p>
+                    <h4>- Amandeep Singh</h4>
+                    <div class="stars">★★★★★</div>
+                </div>
+
+                <!-- Slide 6 -->
+                <div class="swiper-slide testimonial-card">
+                    <p>"Great service! Highly recommended. Very fast and professional turban tying with high quality.
+                        First try
+                        and it turned out perfect!"</p>
+                    <h4>- Gagan Dhillon</h4>
+                    <div class="stars">★★★★★</div>
+                </div>
+
+                <!-- Slide 7 -->
+                <div class="swiper-slide testimonial-card">
+                    <p>"Had a turban tied in Vegas. My turban was 🔥. This guy is the LeBron James of turban tying."</p>
+                    <h4>- Nathaniel Sandhu</h4>
+                    <div class="stars">★★★★★</div>
+                </div>
+
+            </div>
+
+            <!-- Navigation buttons -->
+            <div class="swiper-button-next testimonial-button-next"></div>
+            <div class="swiper-button-prev testimonial-button-prev"></div>
+
+            <!-- Pagination -->
+            <div class="swiper-pagination testimonial-pagination"></div>
+        </div>
+
+    </section>
+
+
+    <footer class="footer fade-in">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="assets/logo/Logo.png" alt="Logo" class="footer-logo" />
+                <p><b>We tie not just turbans, but pride, elegance, and culture.</b></p>
+                <div class="footer-socials">
+                    <a href="https://www.instagram.com/seattleturbanofficial?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                        target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@seattleturban?_t=ZP-8wepvVt4v0B&_r=1" target="_blank"><i
+                            class="fab fa-tiktok"></i></a>
+                    <a href="https://www.facebook.com/SeattleTurban" target="_blank"><i class="fab fa-facebook"></i></a>
+                </div>
+
+            </div>
+
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="services.html">Sevices</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p><b>Email : </b> team@seattleturban.com</p>
+                <p><b>Phone : </b> +1 (206) 771-6638 (Davinder Singh) <br> +1 (425) 524-7884 (Varinder Singh) </p>
+                <p><b>Location : </b> Washington, U.S.A <br> (Open to Travel)</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Seattle Turban. All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- <a class="whatsapp" href="https://wa.me/12067716638" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a> -->
+</body>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+    const testimonialSwiper = new Swiper(".testimonialSwiper", {
+        loop: true,
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: ".testimonial-button-next",
+            prevEl: ".testimonial-button-prev",
+        },
+        pagination: {
+            el: ".testimonial-pagination",
+            clickable: true,
+        },
+        breakpoints: {
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+            },
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 40,
+            },
+            0: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+            },
+        },
+    });
+    const menuBtn = document.getElementById("menu-btn");
+    const navLinks = document.getElementById("nav-links");
+
+    // Toggle menu
+    menuBtn.addEventListener("click", function (e) {
+        e.stopPropagation(); // Prevent immediate close
+        navLinks.classList.toggle("active");
+    });
+
+    // Close menu on outside click
+    document.addEventListener("click", function (e) {
+        if (!navLinks.contains(e.target) && !menuBtn.contains(e.target)) {
+            navLinks.classList.remove("active");
+        }
+    });
+
+    // Close on clicking any nav link
+    const links = navLinks.querySelectorAll("a");
+    links.forEach(link => {
+        link.addEventListener("click", () => {
+            navLinks.classList.remove("active");
+        });
+    });
+
+    const faders = document.querySelectorAll('.fade-in');
+
+  const appearOptions = {
+    threshold: 0.1,
+    rootMargin: "0px 0px -30px 0px"
+  };
+
+  const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('visible');
+      appearOnScroll.unobserve(entry.target);
+    });
+  }, appearOptions);
+
+  faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+  });
+</script>
+
+</html>

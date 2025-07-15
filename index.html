@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seattle Turban</title>
+  <link rel="icon" type="image/png" href="assets/logo/ICON.png">
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+  <nav>
+    <a href="index.html">
+      <div class="logo">
+        <img src="assets/logo/Logo.png" alt="TurbanPro Logo" />
+      </div>
+    </a>
+    <button class="menu-btn" id="menu-btn">☰</button>
+
+    <ul id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="services.html">Sevices</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+
+
+  <section class="hero fade-in" id="home" onclick="hideMenu()">
+    <video autoplay loop muted playsinline class="hero-video desktop-video">
+      <source src="assets/videos/herovideo.MP4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <video autoplay loop muted playsinline class="hero-video mobile-video">
+      <source src="assets/videos/herovideopmobile.MP4" type="video/mp4" />
+    </video>
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>
+        Seattle Turban
+      </h1>
+      <h1>Professional Turban Tying for Every Occasion</h1>
+
+      <p>Traditional style turban tying for grooms and all special occasions, crafted with care and precision.</p>
+      <a href="contact.html">
+        <button class="btn">Book</button>
+      </a>
+    </div>
+  </section>
+
+
+  <!-----------------------------------------------------About Us Section ------------------------------------->
+
+  <section class="about-modern fade-in" id="about">
+    <div class="about-modern-bg"></div>
+    <h1 class="section-heading">
+      About Us</h1>
+    <div class="about-modern-container">
+      <div class="image-grid-wrapper">
+        <img src="assets/images/11.jpg" alt="Main Image" class="main-image" />
+        <img src="assets/logo/Logo.png" alt="Overlay" class="overlay-image" />
+      </div>
+
+      <div class="about-modern-content">
+        <h2>Tradition Meets Style</h2>
+        <p>
+          We specialize in tying turbans and saafas for all cultural and ceremonial occasions — from Sikh traditions to
+          Hindu weddings and royal celebrations. Our service is not just about style, but about honoring heritage,
+          pride, and identity. Whether it’s a spiritual event, a family celebration, or a grand wedding, we bring
+          precision, elegance, and deep respect to every look. With a perfect blend of tradition and sophistication, we
+          help you wear your culture with confidence.
+        </p>
+        <a href="about.html"><button class="about-modern-btn">Explore Us</button></a>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+  <section class="services-section fade-in" id="services">
+    <div class="services-header">
+      <h2>Our Signature Turban Services</h2>
+      <p>Elegance. Precision. Tradition. For Every Occasion.</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="assets/images/wedding turban.jpg" alt="Wedding">
+        <h3>Wedding Turban</h3>
+
+        <p>Majestic & regal turban tying for grooms on their special day. Style that stands out in every photo.</p>
+        <a href="#home" class="services-btn">View All Services</a>
+
+      </div>
+
+      <div class="service-card">
+        <img src="assets/images/cultural.jpeg" alt="Event">
+        <h3>Cultural Events</h3>
+        <p>Perfect folds for cultural gatherings, showcasing Sikh heritage and saafa with dignity and pride.</p>
+        <a href="#home" class="services-btn">View All Services</a>
+      </div>
+
+      <div class="service-card">
+        <img src="assets/images/11.jpg" alt="Family">
+        <h3>Family Ceremonies</h3>
+        <p>Traditional or trendy styles for family members — from the youngest to the wisest member of family.</p>
+        <a href="#home" class="services-btn">View All Services</a>
+      </div>
+
+      <div class="service-card">
+        <img src="assets/images/1.jpg" alt="Photoshoot">
+        <h3>Photoshoots</h3>
+        <p>Modern or classic turban styles for pre-wedding shoots, music videos, or personal portraits with us.</p>
+        <a href="#home" class="services-btn">View All Services</a>
+      </div>
+
+      <div class="service-card">
+        <img src="assets/images/1.jpg" alt="Photoshoot">
+        <h3>On-Site Bookings</h3>
+        <p>We travel across the U.S. for events — from Seattle to Vegas.</p>
+        <a href="#home" class="services-btn">View All Services</a>
+      </div>
+    </div>
+
+
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- --------------------------------------------------------------Portfolio Section --------------------------------------------------- -->
+
+  <section class="portfolio-section fade-in" id="portfolio">
+    <h2 class="portfolio-heading ">Our Portfolio</h2>
+    <p class="portfolio-subtext">A showcase of elegance, tradition, and style.</p>
+
+    <div class="portfolio-gallery">
+      <div class="portfolio-box">
+        <img src="assets/images/16.jpg" alt="Turban Style 1">
+        <div class="overlay">Classic Elegance (Morni Dastar)</div>
+      </div>
+      <div class="portfolio-box tall">
+        <img src="assets/images/11.jpg" alt="Turban Style 2">
+        <div class="overlay">Modern Royal(Saafa)</div>
+      </div>
+      <div class="portfolio-box wide">
+        <img src="assets/images/17.jpg" alt="Turban Style 3">
+        <div class="overlay">Cultural Roots(Saafa)</div>
+      </div>
+      <div class="portfolio-box">
+        <img src="assets/images/28.jpg" alt="Turban Style 4">
+        <div class="overlay">Golden Look(Saafa)</div>
+      </div>
+      <div class="portfolio-box">
+        <img src="assets/images/20.jpg" alt="Turban Style 5">
+        <div class="overlay">Heritage Glow(Patiala Shahi Dastar)</div>
+      </div>
+      <div class="portfolio-box tall">
+        <img src="assets/images/25.jpg" alt="Turban Style 6">
+        <div class="overlay">Classic Elegance(Morni Wattan Wali Dastar)</div>
+      </div>
+      <div class="portfolio-box tall">
+        <img src="assets/images/27.jpg" alt="Turban Style 6">
+        <div class="overlay">Classic Elegance(Saafa)</div>
+      </div>
+    </div>
+    <!-- Portfolio Button -->
+    <div class="portfolio-btn-wrapper">
+      <a href="services.html" class="portfolio-btn">View All Services</a>
+    </div>
+
+
+    <!----Card for mobile-->
+    <div class="swiper flip-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="assets/images/16.jpg" alt="Turban Style 1"></div>
+        <div class="swiper-slide"> <img src="assets/images/11.jpg" alt="Turban Style 2"></div>
+        <div class="swiper-slide"> <img src="assets/images/17.jpg" alt="Turban Style 3"></div>
+        <div class="swiper-slide"><img src="assets/images/28.jpg" alt="Turban Style 4"></div>
+        <div class="swiper-slide"><img src="assets/images/20.jpg" alt="Turban Style 5"></div>
+        <div class="swiper-slide"><img src="assets/images/25.jpg" alt="Turban Style 6"></div>
+        <div class="swiper-slide"><img src="assets/images/Varinder Singh.jpg" alt="Turban Style 7"></div>
+        <div class="swiper-slide"><img src="assets/images/5.jpg" alt="Turban Style 8"></div>
+        <div class="swiper-slide"><img src="assets/images/26.jpg" alt="Turban Style 9"></div>
+      </div>
+    </div>
+
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- ---------------------------------------------testimonials section -------------------------------------------------------------->
+  <section class="testimonial-section fade-in" id="testimonials">
+    <h2 class="testimonial-heading">What Our Clients Say</h2>
+    <p class="testimonial-subtext">Real words from those who experienced the pride and elegance.</p>
+
+    <div class="swiper testimonialSwiper">
+      <div class="swiper-wrapper">
+
+        <!-- Slide 1 -->
+        <div class="swiper-slide testimonial-card">
+          <p>"We had a wonderful experience working with Davinder for our wedding. He was extremely approachable,
+            punctual, and showed a high level of professionalism throughout."</p>
+          <h4>- Atmin D</h4>
+          <div class="stars">★★★★★</div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide testimonial-card">
+          <p>"Had a wonderful experience working with Seattle Turban Tying Service and highly recommend them. Will be
+            using them again for future events as well."</p>
+          <h4>- Milan Basra</h4>
+          <div class="stars">★★★★★</div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide testimonial-card">
+          <p>"Loved the sehra for my wedding. Definitely recommend Seattle Turban Tying Service."</p>
+          <h4>- Utraksh Shrivastav</h4>
+          <div class="stars">★★★★★</div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="swiper-slide testimonial-card">
+          <p>"I worked with them recently and it was an amazing seamless process! They have multiple people to tie pagg,
+            so they get the job done quick and on time."</p>
+          <h4>- Kamalvir Jhajj</h4>
+          <div class="stars">★★★★★</div>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="swiper-slide testimonial-card">
+          <p>"Great service, quick to respond. Traveled to Eastern Washington last minute and took great care of us.
+            Highly recommend!"</p>
+          <h4>- Amandeep Singh</h4>
+          <div class="stars">★★★★★</div>
+        </div>
+
+        <!-- Slide 6 -->
+        <div class="swiper-slide testimonial-card">
+          <p>"Great service! Highly recommended. Very fast and professional turban tying with high quality. First try
+            and it turned out perfect!"</p>
+          <h4>- Gagan Dhillon</h4>
+          <div class="stars">★★★★★</div>
+        </div>
+
+        <!-- Slide 7 -->
+        <div class="swiper-slide testimonial-card">
+          <p>"Had a turban tied in Vegas. My turban was 🔥. This guy is the LeBron James of turban tying."</p>
+          <h4>- Nathaniel Sandhu</h4>
+          <div class="stars">★★★★★</div>
+        </div>
+
+      </div>
+
+      <!-- Navigation buttons -->
+      <div class="swiper-button-next testimonial-button-next"></div>
+      <div class="swiper-button-prev testimonial-button-prev"></div>
+
+      <!-- Pagination -->
+      <div class="swiper-pagination testimonial-pagination"></div>
+    </div>
+
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- --------------------------------------------------------------faqs section -------------------------------------------------------------->
+  <!-- FAQ SECTION -->
+  <section class="faq-section fade-in" id="faq">
+    <div class="faq-container">
+      <div class="faq-header">
+        <h2>FAQ</h2>
+        <p>Frequently asked questions — get knowledge beforehand</p>
+      </div>
+
+      <div class="faq-accordion">
+
+        <!-- FAQ ITEM 1 (default open) -->
+        <div class="faq-item active">
+          <button class="faq-question">
+            How do I book your turban tying service?
+            <span class="arrow">&#9662;</span>
+          </button>
+          <div class="faq-answer">
+            <p>You can book through our <strong>website, WhatsApp, or by calling us directly</strong>. We recommend
+              booking in advance, especially during <strong>wedding and festive seasons</strong>.</p>
+          </div>
+        </div>
+
+        <!-- FAQ ITEM 2 -->
+        <div class="faq-item">
+          <button class="faq-question">
+             Do you provide home service and travel to different locations?
+            <span class="arrow">&#9662;</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+  <strong>Yes</strong>, we offer doorstep turban tying services based on your location and availability. 
+  We also travel across the <strong>United States and Mexico</strong> for events and bookings. 
+  <strong>Travel charges may apply</strong> for long-distance or out-of-state appointments.
+</p>
+          </div>
+        </div>
+
+        <!-- FAQ ITEM 3 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            Do you offer turban tying tutorials or classes?
+            <span class="arrow">&#9662;</span>
+          </button>
+          <div class="faq-answer">
+            <p><strong>Yes!</strong> We offer 1-on-1 and group turban tying tutorials both online and in person. Perfect
+              for anyone wanting to learn traditional or modern styles.</p>
+          </div>
+        </div>
+
+        <!-- FAQ ITEM 4 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            How long does it take to tie a turban?
+            <span class="arrow">&#9662;</span>
+          </button>
+          <div class="faq-answer">
+            <p>On average, it takes <strong>10 to 15 minutes per person</strong>, depending on the style and fabric. We
+              always aim for perfection, not speed.</p>
+          </div>
+        </div>
+
+
+       <!-- FAQ ITEM 5 -->
+<div class="faq-item">
+  <button class="faq-question">
+    How long should the turban be, and do I need to prepare the cloth?
+    <span class="arrow">&#9662;</span>
+  </button>
+  <div class="faq-answer">
+    <p>
+      <strong>For Adults:</strong> 7.5 meters for 6 layers, 6.5 meters for 5 layers<br>
+      <strong>For Kids (aged 2–6):</strong> 4 meters<br><br>
+
+      <strong>Cloth Preparation:</strong><br>
+      - <strong>Sikh Dastars:</strong> Please get the cloth stitched and washed + dried for 20 minutes.<br>
+      - <strong>Safa/Pheta:</strong> No preparation is needed.
+    </p>
+  </div>
+</div>
+
+
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- ------------------------------------contact us section ----------------------------------------------> -->
+  <!-- Contact Section -->
+  <section class="contact-section fade-in" id="contact">
+    <div class="contact-container">
+
+      <!-- Left Image with Styling -->
+      <div class="contact-image">
+        <div class="image-wrapper">
+          <img src="assets/images/11.jpg" alt="Turban Booking">
+          <div class="image-overlay">
+            <span class="shine-text">Tradition Meets Style</span>
+          </div>
+          <div class="circle decor1"></div>
+          <div class="circle decor2"></div>
+        </div>
+      </div>
+
+
+      <!-- Right Form -->
+      <form id="contactForm" action="https://formsubmit.co/team@seattleturban.com" method="POST" class="contact-form">
+        <h2>Book Your Turban Styling</h2>
+
+        <input type="text" name="name" placeholder="Full Name" required />
+        <input type="tel" name="phone" placeholder="Mobile Number" required maxlength="14" id="phone" />
+        <input type="email" name="email" placeholder="Gmail" required />
+        <input type="date" name="date" placeholder="Booking Date" required />
+        <input type="number" name="persons" placeholder="Number of Persons" min="1" required />
+        <textarea name="message" placeholder="Your Message" rows="4"></textarea>
+
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_next" value="#" />
+
+        <button type="submit" id="submitBtn">Submit Booking</button>
+
+        <div id="confirmationMessage">✅ Thank you! Your booking has been received. We will contact you soon.</div>
+      </form>
+
+
+
+      <!-- Popup message -->
+      <div id="popup"
+        style="display:none;position:fixed;top:20px;left:50%;transform:translateX(-50%);background:#0a0;color:#fff;padding:15px 25px;border-radius:10px;z-index:1000;">
+        Form submitted! We will contact you soon.
+      </div>
+
+
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- ----------------------------------FOOTER SECTION ---------------------------------------------->
+  <footer class="footer fade-in">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <img src="assets/logo/Logo.png" alt="Logo" class="footer-logo" />
+        <p><b>We tie not just turbans, but pride, elegance, and culture.</b></p>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/seattleturbanofficial?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+            target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.tiktok.com/@seattleturban?_t=ZP-8wepvVt4v0B&_r=1" target="_blank"><i
+              class="fab fa-tiktok"></i></a>
+          <a href="https://www.facebook.com/SeattleTurban" target="_blank"><i class="fab fa-facebook"></i></a>
+        </div>
+
+      </div>
+
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="services.html">Sevices</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p><b>Email : </b> team@seattleturban.com</p>
+        <p><b>Phone : </b> +1 (206) 771-6638 (Davinder Singh) <br> +1 (425) 524-7884 (Varinder Singh) </p>
+        <p><b>Location : </b> Washington, U.S.A <br> (Open to Travel)</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Seattle Turban. All rights reserved.</p>
+    </div>
+  </footer>
+  <!-- <a class="whatsapp" href="https://wa.me/12067716638" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a> -->
+
+</body>
+<script src="assets/main.js"></script>
+
+</html>
